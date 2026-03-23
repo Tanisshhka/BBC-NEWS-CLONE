@@ -1,0 +1,118 @@
+.sidebar {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  height: fit-content;
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.sidebar__header-icon {
+  flex-shrink: 0;
+}
+
+.sidebar__title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.2s ease;
+}
+
+.sidebar__item:last-child {
+  border-bottom: none;
+}
+
+.sidebar__item:hover {
+  background: var(--color-hover-bg);
+}
+
+.sidebar__item-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  flex-shrink: 0;
+  opacity: 0.6;
+  min-width: 24px;
+}
+
+.sidebar__item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.sidebar__item-title {
+  margin: 0;
+  font-size: 0.83rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s;
+}
+
+.sidebar__item:hover .sidebar__item-title {
+  color: var(--color-accent);
+}
+
+.sidebar__item-date {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* Skeleton */
+.sidebar__skeleton {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.sidebar__skeleton-line {
+  height: 12px;
+  background: var(--color-skeleton);
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+.sidebar__skeleton-line--long { width: 90%; }
+.sidebar__skeleton-line--short { width: 50%; }
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
