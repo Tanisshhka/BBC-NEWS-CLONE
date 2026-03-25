@@ -39,11 +39,12 @@ const Home = () => {
           {/* Featured Article */}
           {loading && !featured ? (
             <CardSkeleton />
-          ) : featured ? (
-            <div className="home__featured">
-              <NewsCard article={featured} featured={true} />
-            </div>
-          ) : null}
+          ) : featured && (
+            <section className="home__hero">
+              <NewsCard article={featured} featured={true} horizontal={true} />
+            </section>
+          )}
+
 
           {/* Section Header */}
           <div className="home__section-header">

@@ -13,10 +13,14 @@ const Footer = () => (
     <div className="footer__inner">
       <div className="footer__brand">
         <Link to="/" className="footer__logo">
-          <span className="footer__logo-text">BBC</span>
-          <span className="footer__logo-sub">News</span>
+          <div className="bbc-blocks">
+            <span>B</span><span>B</span><span>C</span>
+          </div>
+          <span className="footer__logo-sub">NEWS</span>
         </Link>
-        <p className="footer__tagline">Trusted world news, every hour of every day.</p>
+        <p className="footer__tagline">
+          Trusted, impartial news from around the world.
+        </p>
         <div className="footer__social">
           <a href="https://facebook.com/bbcnews" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FiFacebook /></a>
           <a href="https://twitter.com/bbcnews" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><FiTwitter /></a>

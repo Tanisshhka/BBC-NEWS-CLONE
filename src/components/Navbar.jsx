@@ -50,9 +50,11 @@ const Navbar = () => {
           {menuOpen ? <FiX size={22} /> : <FiMenu size={22} />}
         </button>
 
-        <Link to="/" className="navbar__logo">
-          <span className="navbar__logo-text">BBC</span>
-          <span className="navbar__logo-sub">News</span>
+        <Link to="/" className="navbar__logo" aria-label="BBC News Home">
+          <div className="bbc-blocks">
+            <span>B</span><span>B</span><span>C</span>
+          </div>
+          <span className="navbar__logo-sub">NEWS</span>
         </Link>
 
         <div className="navbar__actions">
